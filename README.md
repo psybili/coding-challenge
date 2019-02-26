@@ -44,5 +44,5 @@ CP10 AVAILABLE
 ```
 
 ## Deliverables:
-Link to the git repository with the implementation and the documentation on how to call the API (Swagger/Postman collection/text description).
+Zipped archive with the implementation and the documentation on how to call the API (Swagger/Postman collection/text description).
 Please add any details about your ideas and considerations to this README and add it to the repository.
