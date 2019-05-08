@@ -14,9 +14,13 @@ The application must distribute the available current of 100 Amperes among the c
 Cars which were connected earlier have lower priority than those which were connected later.
 The application must also provide a report with a current state of each charging point returning a list of charging point, status (free or occupied) and - if occupied – the consumed current.
 
-## Constraints:
-The solution must be implemented as a Spring Boot application exposing a REST API.
-Include at least one unit test and one integration test.
+## Requirements:
+1. The solution must be implemented as a Spring Boot application with Java.
+2. We need to be able to start it and run tests.
+3. BIZ logic needs to be implemented correctly.
+4. Interaction with the APP needs to happen through well-defined REST APIs.
+4. Include at least one unit test and one integration test.
+3. Solution needs to be thread safe.
 
 ## Examples:
 
@@ -44,5 +48,5 @@ CP10 AVAILABLE
 ```
 
 ## Deliverables:
-Zipped archive with the implementation and the documentation on how to call the API (Swagger/Postman collection/text description).
+Link to the git repository with the implementation and the documentation on how to call the API (Swagger/Postman collection/text description).
 Please add any details about your ideas and considerations to this README and add it to the repository.
