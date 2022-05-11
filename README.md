@@ -1,16 +1,49 @@
 # Coding challenge
 **Carpark Ubi**
 
+## How to Build the Application
+Run the following command to build the application
+```
+mvn clean install
+```
+Now the application can be run
+
+## How to Run Application with maven
+Run the following command to run the application with maven
+```
+mvn spring-boot:run
+```
+The application should listen on localhost:8080
+
+## How to Run Tests with maven
+Run the following command to test the application with maven
+```
+mvn test
+```
+Unit, Integration, and Acceptance tests should be run
+
+## REST API
+There are three endpoints to the application
+1. [/park/plug/{id}](http://localhost:8080/park/plug/{id})
+   Charging point with 1<=id<=10 is plugged and status is returned
+2. [/park/unplug/{id}](http://localhost:8080/park/unplug/{id})
+   Charging point with 1<=id<=10 is unplugged and status is returned
+3. [/park/report](http://localhost:8080/park/report)
+   Return a string to show status for all charging points
+
+## Postman Collection
+**Ubitricity.postman_collection.json**
+
 ## Domain vocabulary:
 EV - electric vehicle.
 CP - charging point, an element in an infrastructure that supplies electric energy for the recharging of electric vehicles.
 
 ## Problem details:
 The task is to implement a simple application to manage the charging points installed at Carpark Ubi.
-Carpark Ubi has 10 charging points installed. When a car is connected it consumes either 20 Amperes (fast charging) or 10 Amperes (slow charging). 
+Carpark Ubi has 10 charging points installed. When a car is connected it consumes either 20 Amperes (fast charging) or 10 Amperes (slow charging).
 Carpark Ubi installation has an overall current input of 100 Amperes so it can support fast charging for a maximum of 5 cars or slow charging for a maximum of 10 cars at one time.
 A charge point notifies the application when a car is plugged or unplugged.
-The application must distribute the available current of 100 Amperes among the charging points so that when possible all cars use fast charging and when the current is not sufficient some cars are switched to slow charging. 
+The application must distribute the available current of 100 Amperes among the charging points so that when possible all cars use fast charging and when the current is not sufficient some cars are switched to slow charging.
 Cars which were connected earlier have lower priority than those which were connected later.
 The application must also provide a report with a current state of each charging point returning a list of charging point, status (free or occupied) and - if occupied – the consumed current.
 

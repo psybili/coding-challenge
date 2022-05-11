@@ -1,0 +1,44 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Ubitricity",
+		"_postman_id": "4a587851-3f80-8f0d-1a39-5d338e15cef6",
+		"description": "Car Park charging point management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "report",
+			"request": {
+				"url": "localhost:8080/park/report",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "plug charging point",
+			"request": {
+				"url": "http://localhost:8080/park/plug/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "charging point with id is plugged"
+			},
+			"response": []
+		},
+		{
+			"name": "unplug charging point",
+			"request": {
+				"url": "http://localhost:8080/park/unplug/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "charge point with id unplugged"
+			},
+			"response": []
+		}
+	]
+}
